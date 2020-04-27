@@ -102,3 +102,5 @@ gato.prototype.toString = function() {
 
 };
 document.write(gato2.toString());
+
+//Examples from You Tube Channel
