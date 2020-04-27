@@ -18,7 +18,7 @@ function gato(nombre, edad, peso) {
     this.edad = edad;
     this.peso = peso;
 
-    this.correr = function() { document.write("El gato", " ", nombre, " ", "corre" + "<br>"); };
+    this.correr = function() { document.write("El gato", " ", nombre, " ", "corre muy rapido" + "<br>"); };
 };
 
 var gato1 = new gato("MediaNoche", 5, 7);
