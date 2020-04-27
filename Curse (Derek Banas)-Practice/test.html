@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("RandomNumb 1-10 =", Math.floor(Math.random() * 10) + 1, "<br>");
+
+
+        // Ternary Operator assigns a value based on a condition
+        // (condition) ? iftrue : ifFalse
+        var age = 8;
+
+        var canIVote = (age >= 18) ? true : false;
+
+        document.write("Can I Vote : ", canIVote, "<br />");
+
+
+        var semana = ["lunes", "martes", "miercoles", "jueves"];
+
+        var hi = semana.slice(2);
+        document.write(hi, "<br>");
+
+
+        function multiply(func, num) {
+            return func(num);
+
+        }
+
+        var triple = function(num) {
+            return num + 3;
+        }
+        document.write("3 + 45 = ", multiply(triple, 45), "<br>");
+
+
+
+        var xxx = ['a', 'b', 'c'];
+        var res = "";
+        for (var y in xxx) {
+            res += y;
+
+        }
+        alert(res);
+
+        //sort number
+        var numbers = [5, 9, 1, 7, 6, 3, 10, 8, 4, 2];
+
+        numbers.sort(function(x, y) {
+            return x - y
+                //return y-x decending order
+
+        }); //..................................valueOf()
+        //.....................................join(", ")
+        document.write("Num Array :", numbers.toString(), "<br>");
+
+
+        function suma(num) {
+            return num + 5
+
+        }
+        var este = suma(20);
+
+        document.write("la suma ess :", este, "<br>"); //suma(70));
+
+
+
+        // Return a variable number of values
+        function times2(theArray) {
+
+            var newArray = [];
+            for (i = 0; i < theArray.length; i++) {
+                newArray.push(theArray[i] * 2);
+            }
+            return newArray;
+        }
+
+        document.write("Array Doubled : ", times2([1, 2, 3, 4, 5]).toString(), "<br />");
+    </script>
+</body>
+
+</html>
