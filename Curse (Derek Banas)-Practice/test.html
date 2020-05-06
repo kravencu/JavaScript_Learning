@@ -27,15 +27,15 @@
         document.write(hi, "<br>");
 
 
-        function multiply(func, num) {
-            return func(num);
+        function multiply(func, num, otro) {
+            return func(num, otro);
 
         }
 
-        var triple = function(num) {
-            return num + 3;
+        var triple = function(num, other) {
+            return num + other + 3;
         }
-        document.write("3 + 45 = ", multiply(triple, 45), "<br>");
+        document.write("3 + 45 + 2 = ", multiply(triple, 45, 2), "<br>");
 
 
 

@@ -9,7 +9,7 @@ Class Objecto {
     -walk
     -move
 };*/
-// Two different way to create class and teir object
+// Different way to create Obejects (Class,constructor,methods,objects......)
 
 //##################################################1st#####################################################
 function gato(nombre, edad, peso) {
@@ -17,33 +17,57 @@ function gato(nombre, edad, peso) {
     this.nombre = nombre;
     this.edad = edad;
     this.peso = peso;
+    this.jump = jumper;
+    this.YearOfBirth = BornYear;
 
-    this.correr = function() { document.write("El gato", " ", nombre, " ", "corre muy rapido" + "<br>"); };
+    //method correr inside a constructor
+    this.correr = function() { document.write("El gato", " ", nombre, " ", "corre muy rapido", this.YearOfBirth() + "<br>"); };
+};
+//method jumper outside the constructor
+function jumper() {
+    document.write("El gato ", " ", this.nombre, " ", "salta muy alto", " ", "y nacio en el ano", " ", this.YearOfBirth(), "<br>")
+
+};
+
+//method BornYear outside the constructor allowing be using for object gato and dog....
+function BornYear() {
+    var dt = new Date();
+    var yyyy = dt.getFullYear();
+    return yyyy - this.edad;
+
 };
 
 var gato1 = new gato("MediaNoche", 5, 7);
 var gato2 = new gato("Manchitas", 7, 9);
 //document.write(gato2.nombre, " ", "tiene", " ", gato2.edad, " ", "anos", " ");
 
+document.write("Year of birth was:", " ", gato1.YearOfBirth(), "<br>");
+gato1.jump();
 gato2.correr();
 
 //####################################################################################//#endregion
 
 //###########################################2nd#########################################
+//Declare a class and constructor object properties and methods
 class dog {
     constructor(nombre, edad, peso) {
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
+        this.YearOfBirth = BornYear; // method inside the constructor
     }
+
+    //Method corrrer outside a constructor and whitout a "function" word...
     corrrer() {
         document.write("El perro", " ", this.nombre, " ", "corre" + "<br>");
     };
 
 };
 var perro1 = new dog("Firulais", 2, 20);
+var perro2 = new dog("Sherift", 10, 20);
 document.write(perro1.nombre + "<br>");
 perro1.corrrer();
+document.write("Year of birth was:", " ", perro2.YearOfBirth(), "<br>");
 
 //###############################Heritage###################################//#endregion
 
