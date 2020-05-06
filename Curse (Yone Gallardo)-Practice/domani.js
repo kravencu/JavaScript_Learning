@@ -17,9 +17,27 @@ titulo[2].style.color = "green";
 
 // Position for insertion ,must be after the whole DOM it's ready...
 
-var getEveryDiv = document.getElementById("alldiv");
+//Using the conditional switch intead if elseif
+function colorin(colores) {
 
+    var getEveryDiv = document.getElementById("alldiv");
 
+    switch (colores) {
+        case "red":
+            getEveryDiv.style.backgroundColor = 'red';
+            break;
+        case "blue":
+            getEveryDiv.style.backgroundColor = 'blue';
+            break;
+        case "green":
+            getEveryDiv.style.backgroundColor = 'green';
+            break;
+        default:
+            getEveryDiv.style.backgroundColor = 'white';
+
+    }
+};
+/*Using conditional if elseif
 function colorin(colores) {
     if (colores == "red") {
         getEveryDiv.style.backgroundColor = 'red';
@@ -34,7 +52,8 @@ function colorin(colores) {
     } else
         getEveryDiv.style.backgroundColor = 'white';
 
-}
+}*/
+
 
 // Position for insertion ,must be after the whole DOM it's ready...
 
@@ -57,7 +76,7 @@ for (var i = 0; i < myElements.length; i++) {
 
 
 }
-// Adding a class Value
+// Adding a class Value from an external CSS file. ex. css.css
 var bod = document.querySelector('#superman');
 bod.classList.add('addbod');
 

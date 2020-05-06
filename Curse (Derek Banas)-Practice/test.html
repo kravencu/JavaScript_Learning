@@ -9,6 +9,8 @@
 
 <body>
     <script>
+        /* The + 1 mean that the Math Object methods (Math.random()) never is gonna be cero.active
+                                                                                                                                                                By defaults it can take the value of cero (0),..*/
         document.write("RandomNumb 1-10 =", Math.floor(Math.random() * 10) + 1, "<br>");
 
 
@@ -20,15 +22,15 @@
 
         document.write("Can I Vote : ", canIVote, "<br />");
 
-
+        //################################################################################//#endregion
         var semana = ["lunes", "martes", "miercoles", "jueves"];
 
-        var hi = semana.slice(2);
+        var hi = semana.slice(0, 4);
         document.write(hi, "<br>");
 
 
         function multiply(func, num, otro) {
-            return func(num, otro);
+            return func(num, otro); // call to the function triple (num, other);###//#endregion
 
         }
 
@@ -80,7 +82,7 @@
         }
 
         document.write("Array Doubled : ", times2([1, 2, 3, 4, 5]).toString(), "<br />");
-
+        //#########################################################################################################
         //tesing even and odd number
 
         for (j = 0; j <= 20; j++) {
@@ -106,7 +108,7 @@
             document.write("<br>" + j + "<br>");
 
         }
-
+        //#######################################################################################################
 
         // ---------- ARRAYS ----------
         // Arrays have variable sizes and can contain multiple types in JS
@@ -121,6 +123,8 @@
         // Overwrite index 2 and fit everything else after index 2 without
         // overwriting (Put 0 for second parameter to not overwrite)
         tomSmith.splice(2, 1, "Pittsburgh", "PA");
+
+
 
         // Delete the 4th index item
         tomSmith.splice(4, 1);
@@ -160,7 +164,7 @@
         tomSmith.shift();
 
         // Adds item to the first index
-        tomSmith.unshift("Tom Smith");
+        tomSmith.unshift("Noel Smith");
 
         for (var i = 0; i < tomSmith.length; i++) {
             document.write(tomSmith[i], "<br />");
@@ -169,8 +173,18 @@
 
 
         for (i in tomSmith) {
-            document.write(tomSmith[i], "<br />");
-        }
+            document.write("<br>", tomSmith[i], "<br />");
+
+        };
+        // Just testint if condition inside a while loop, Good look ...thks
+        var uno0 = 20;
+        while (uno0 < 30) {
+            if (uno0 === 25) {
+                break;
+            }
+            document.write(uno0, "<br>");
+            uno0++;
+        };
     </script>
 </body>
 
