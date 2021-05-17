@@ -52,7 +52,7 @@ var lectura = repetir.slice(2, 8); // reading or finding similar returnig strin 
 document.write(lectura, " ", "estoy aki", "<br>")
 
 
-var ara = " lunes,martes,miercoles,jueves,viernes ";
+var ara = " noel,lunes,martes,miercoles,jueves,viernes ";
 
 console.log(ara.split(",")); // must open web developet of your browser
 // Important split transform a string to an array "very usefull"...

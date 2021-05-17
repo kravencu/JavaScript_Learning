@@ -9,6 +9,8 @@
 
 <body>
     <script>
+        /* The + 1 mean that the Math Object methods (Math.random()) never is gonna be cero.active
+                                                                                                                                                                        By defaults it can take the value of cero (0),..*/
         document.write("RandomNumb 1-10 =", Math.floor(Math.random() * 10) + 1, "<br>");
 
 
@@ -20,22 +22,22 @@
 
         document.write("Can I Vote : ", canIVote, "<br />");
 
-
+        //################################################################################//#endregion
         var semana = ["lunes", "martes", "miercoles", "jueves"];
 
-        var hi = semana.slice(2);
+        var hi = semana.slice(0, 4);
         document.write(hi, "<br>");
 
 
-        function multiply(func, num) {
-            return func(num);
+        function multiply(func, num, otro) {
+            return func(num, otro); // call to the function triple (num, other);###//#endregion
 
         }
 
-        var triple = function(num) {
-            return num + 3;
+        var triple = function(num, other) {
+            return num + other + 3;
         }
-        document.write("3 + 45 = ", multiply(triple, 45), "<br>");
+        document.write("3 + 45 + 2 = ", multiply(triple, 45, 2), "<br>");
 
 
 
@@ -56,8 +58,8 @@
 
         }); //..................................valueOf()
         //.....................................join(", ")
-        document.write("Num Array :", numbers.toString(), "<br>");
-
+        document.write("Num Array to string:", numbers.toString(), "<br>");
+        document.write("Num Array using join:", numbers.join(" - "), "<br>");
 
         function suma(num) {
             return num + 5
@@ -80,6 +82,109 @@
         }
 
         document.write("Array Doubled : ", times2([1, 2, 3, 4, 5]).toString(), "<br />");
+        //#########################################################################################################
+        //tesing even and odd number
+
+        for (j = 0; j <= 20; j++) {
+            if ((j % 2) !== 0) {
+                continue;
+            }
+            if (j === 14) {
+
+                break;
+            }
+            document.write(j + "<br>");
+
+        }
+
+        for (j = 0; j <= 20; j++) {
+            if ((j % 2) === 0) {
+                continue;
+            }
+            if (j === 15) {
+
+                break;
+            }
+            document.write("<br>" + j + "<br>");
+
+        }
+        //#######################################################################################################
+
+        // ---------- ARRAYS ----------
+        // Arrays have variable sizes and can contain multiple types in JS
+        var tomSmith = ["Tom Smith", "123 Main", 120.50];
+
+        // Access first array item
+        document.write("1st State : ", tomSmith[0], "<br />");
+
+        // Add an item
+        tomSmith[3] = "tsmith@aol.com";
+
+        // Overwrite index 2 and fit everything else after index 2 without
+        // overwriting (Put 0 for second parameter to not overwrite)
+        tomSmith.splice(2, 1, "Pittsburgh", "PA");
+
+
+
+        // Delete the 4th index item
+        tomSmith.splice(4, 1);
+
+        // Convert an array into a string (Also use toString())
+        document.write("Array : ", tomSmith.valueOf(), "<br />");
+
+        // Convert an array into a string with separator
+        document.write("Array : ", tomSmith.join(", "), "<br />");
+
+        // Delete an index
+        delete tomSmith[3];
+
+        // Sort an array (reverse() for reverse sort)
+        // Works for sorting strings
+        tomSmith.sort();
+
+        // Sort numbers
+        var numbers = [4, 3, 9, 1, 20, 43];
+
+        // Descending sort return y - x
+        numbers.sort(function(x, y) {
+            return x - y
+        });
+        document.write("Num Array : ", numbers.toString(), "<br />");
+
+        // Combine arrays
+        var combinedArray = numbers.concat(tomSmith);
+
+        // Remove the last item
+        tomSmith.pop();
+
+        // Add items to the end
+        tomSmith.push("555-1212", "US");
+
+        // Deletes the first item
+        tomSmith.shift();
+
+        // Adds item to the first index
+        tomSmith.unshift("Noel Smith");
+
+        for (var i = 0; i < tomSmith.length; i++) {
+            document.write(tomSmith[i], "<br />");
+        }
+
+
+
+        for (i in tomSmith) {
+            document.write("<br>", tomSmith[i], "<br />");
+
+        };
+        // Just testint if condition inside a while loop, Good look ...thks
+        var uno0 = 20;
+        while (uno0 < 30) {
+            if (uno0 === 25) {
+                break;
+            }
+            document.write(uno0, "<br>");
+            uno0++;
+        };
     </script>
 </body>
 
