@@ -14,7 +14,8 @@ val_form("Noel", "Gil" +"<br>");
 
 //########################################################
 function cinco(...months){ // defined uknow number of arguments
-for(let one of months){
+for(let one of months){ // using to put a value diferent to an array
+	//return document.write(months);
 	document.write(one + "<br>");
 
 }
