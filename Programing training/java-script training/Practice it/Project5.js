@@ -21,7 +21,7 @@ for(let one of months){ // using to put a value diferent to an array
 }
 
 };
-cinco("Enero", "Febrero","Marzo","Abril","Mayo"); // We got an array
+cinco("Enero", "Febreroo","Marzo","Abril","Mayo"); // We got an array
 //################################################################
 
 function seis (nombre,precio,peso){ // define know number of argumets
