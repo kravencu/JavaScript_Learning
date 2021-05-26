@@ -13,30 +13,33 @@ var a = document.getElementsByTagName('p');
 a[3].style.color = "red";
 
 var titulo = document.getElementsByClassName('tit');
-titulo[2].style.color = "green";
+titulo[1].style.color = "red";
 
 // Position for insertion ,must be after the whole DOM it's ready...
 
 //Using the conditional switch intead if elseif
-function colorin(colores) {
+//
 
-    var getEveryDiv = document.getElementById("alldiv");
+/*document.getElementById("#onee").onclick =
+    function colorin(colores) {
 
-    switch (colores) {
-        case "red":
-            getEveryDiv.style.backgroundColor = 'red';
-            break;
-        case "blue":
-            getEveryDiv.style.backgroundColor = 'blue';
-            break;
-        case "green":
-            getEveryDiv.style.backgroundColor = 'green';
-            break;
-        default:
-            getEveryDiv.style.backgroundColor = 'white';
+        var getEveryDiv = document.getElementById("alldiv");
 
-    }
-};
+        switch (colores) {
+            case "red":
+                getEveryDiv.style.backgroundColor = 'red';
+                break;
+            case "blue":
+                getEveryDiv.style.backgroundColor = 'blue';
+                break;
+            case "green":
+                getEveryDiv.style.backgroundColor = 'green';
+                break;
+            default:
+                getEveryDiv.style.backgroundColor = 'black';
+
+        }
+    };
 /*Using conditional if elseif
 function colorin(colores) {
     if (colores == "red") {
@@ -84,3 +87,12 @@ bod.classList.add('addbod');
 
 /*var bod = document.querySelector('#superman');
 bod.classList.remmove('addbod');*/
+
+//setInterval (param,mls)
+//setTimeout  (param,mls)
+function coming() {
+    var timeline = setInterval(function() {
+            document.write("Jesus is Coming");
+        },
+        4000)
+};
