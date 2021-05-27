@@ -7,8 +7,8 @@
                       Curse from Youtuber channell Yonuel Gallardo
 */
 
-var a = 15.44;
-var b = Number.isInteger(a);
+var a = "15.44";
+var b = Number.parseFloat(a);
 document.write(typeof b + "<br>");
 /*##########################Count and seaarch###################################### */
 var saludo = "Hello World,how are you,yesss you?";
