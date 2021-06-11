@@ -106,9 +106,15 @@ document.write(typeof j + "<br>");
 //document.write(typeof j, +" " + j.length + "<br>");
 
 var weekk = Array.from(document.querySelectorAll(".week p")); //map
-
 var cracion = weekk.map(dias => dias.textContent);
 console.log(cracion);
+
+var way_other = Array.from(document.querySelectorAll(".week p"));
+var way_ot = way_other.map(function way_other(dias) {
+    return dias.textContent
+});
+console.log(way_ot);
+
 
 
 var semana = ["lunes", "martes", "miercoles", "jueves", "viernes", "lunes"]; //UpperCase has priority at the first
@@ -124,25 +130,32 @@ numbers.sort(function(x, y) {
         //return y-x decending order
 
 });
-document.write("Num Array :", numbers.toString(), "<br>");
-//reverse
-document.write(semana.reverse() + "<br>");
+document.write("Num Array :", numbers.toString(), "<br>"); // return string of number
 
+
+//reverse
+document.write(semana.reverse() + "<br>"); // reverde the order of the aprevious array
+
+//#####################################################################################################
 for (var i in semana) {
-    document.write(semana[i], "<br>");
+    document.write(semana[i], "<br>"); // print only the value
 
 };
 //MUST BE VERY CAREFULL WITH THE ORDER OF ALL VARIABLES...
 
 semana.forEach(
-    (dos, i) => document.write(i + "-" + dos + "<br>")
+    (dos, i) => document.write(i + "-" + dos + "<br>") // print the value and the index
 
 );
+//#######################################################################################
+
+
+
 var buscar = semana.find(dos => dos == "martes"); //return the first value that match
 document.write(buscar + "<br>");
 
 
-var busscar = semana.findIndex(tres => tres == "lunes");
+var busscar = semana.findIndex(tres => tres == "lunes"); // return index of the value
 document.write(busscar + "<br>");
 
 var filtrar = semana.filter(tress => tress == "lunes"); //return all the value found within the array.

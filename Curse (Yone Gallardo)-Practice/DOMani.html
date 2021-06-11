@@ -10,9 +10,19 @@
 
 <body id="superman">
 
+    <input type="hidden" name="up">
+    <input type="hidden" name="down">
+
+    <script>
+        var up_names = document.getElementsByName("up");
+        console.log(up_names[0].tagName); // displays "INPUT"
+    </script>
+
+
+
     <button id="reload">change Color</button><br />
-    <button id="onee" class="one">RED</button>
-    <button class="one">Blue</button>
+    <button id="onee" class="one" onclick="colorin('red')">RED</button>
+    <button class="one" name="blue">Blue</button>
     <button class="one">Green</button>
 
     <div id="alldiv">
@@ -31,11 +41,11 @@
             <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Proin eget turpis eget quam luctus malesuada ut ac nulla. Suspendisse fermentum magna neque, a auctor felis pretium eget. <em>Fusce ornare</em> feugiat magna, ut faucibus sapien
                 congue ut. <b>Nunc nec fringilla</b> ex, nec varius nisl.</p>
         </div>
-        <div id="sampDiv3">
+        <div id="sampDiv3" class="ulti">
             <h1 class="tit">Title three</h1>
             <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing</em> elit. Proin eget turpis eget quam luctus malesuada ut ac nulla. Suspendisse fermentum magna neque, a auctor felis pretium eget. Fusce ornare feugiat magna, ut faucibus sapien congue
                 ut. Nunc nec fringilla ex, nec varius nisl. Ut eget laoreet nisi. Aenean quis venenatis mauris, at volutpat ante. Donec sollicitudin lacinia ornare. In quis accumsan ligula, id egestas enim.</p>
-            <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Proin eget turpis eget quam luctus malesuada ut ac nulla. Suspendisse fermentum magna neque, a auctor felis pretium eget. <em>Fusce ornare</em> feugiat magna, ut faucibus sapien
+            <p class="yes">Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Proin eget turpis eget quam luctus malesuada ut ac nulla. Suspendisse fermentum magna neque, a auctor felis pretium eget. <em>Fusce ornare</em> feugiat magna, ut faucibus sapien
                 congue ut. <b>Nunc nec fringilla</b> ex, nec varius nisl.</p>
         </div>
 
@@ -44,6 +54,8 @@
     <div>
         <p></p>Im here</div>
     <script type="text/javascript" src="domani.js"></script>
+
+
 
 
 </body>
