@@ -121,3 +121,79 @@ var week = ["monday", "tuesday", "wensday"];
 for (let one of week) {
     document.write(one + "<br>");
 }
+
+//addind a  handlers event to elements...
+
+// working
+var txt = document.getElementById("text");
+txt.onchange = function() {
+    txt.value = txt.value.toUpperCase();
+    alert("Usted ha salido del formulario");
+}
+
+
+// example from sololearn image slide
+window.onload = function() {
+    var images = ["http://www.sololearn.com/uploads/slider/1.jpg",
+        "http://www.sololearn.com/uploads/slider/2.jpg",
+        "http://www.sololearn.com/uploads/slider/3.jpg",
+
+    ];
+
+    var num = 0;
+
+    var sslider = document.getElementById("next");
+    sslider.addEventListener("click", next);
+
+    function next() {
+        var slider = document.getElementById("slider");
+        num++;
+        if (num >= images.length) {
+            num = 0;
+        }
+        slider.src = images[num];
+    }
+};
+
+
+
+//original 
+function prev() {
+    var slider = document.getElementById("slider");
+    num--;
+
+    if (num < 0) {
+        num = images.length - 1;
+    }
+    slider.src = images[num];
+};
+
+// element with inside event handler not working
+var slider = document.getElementById("slider");
+
+slider.onclick = function() {
+    num--;
+
+    if (num < 0) {
+        num = images.length - 1;
+    }
+    slider.src = images[num];
+};
+
+// get it even number
+
+for (j = 0; j <= 20; j++) {
+    if ((j % 2) === 0) {
+        document.write(j + "<br>");
+    }
+}
+
+// get in odds numbers
+for (j = 0; j <= 20; j++) {
+    if ((j % 2) === 0) {
+        continue; // break the loop and return to the increment os the loop
+
+    }
+    document.write(j + "<br>");
+
+}

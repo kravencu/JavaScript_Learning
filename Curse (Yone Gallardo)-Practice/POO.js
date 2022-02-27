@@ -67,8 +67,7 @@ var perro1 = new dog("Firulais", 2, 20);
 var perro2 = new dog("Sherift", 10, 20);
 document.write(perro1.nombre + "<br>");
 perro1.corrrer();
-document.write("Year of birth was:", " ", perro2.YearOfBirth(), "<br>");
-
+document.write("Year of birth was:", " ", perro2.nombre, " ", perro2.YearOfBirth(), "<br>");
 //###############################Heritage###################################//#endregion
 
 class Animal {
